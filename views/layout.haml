@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Spider por Grupo Espiral
+    != haml(:_head_include, :layout => false)
+  %body
+    - if current_user
+      %a{:href => "/logout"} 
+        logout
+    - else
+      %a{:href => "/login"}
+        login
+    != yield

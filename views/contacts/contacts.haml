@@ -1,0 +1,5 @@
+%form{:action => "/emails/#{@email.id}/contacts", :method => 'post'}
+  - @contacts.each do |contact|
+    %input{:type => 'checkbox', :name => "contacts[]", :value => contact.email, :checked => contact.checked}
+      = contact.email
+  %input{:type => 'submit', :value => 'guardar'}

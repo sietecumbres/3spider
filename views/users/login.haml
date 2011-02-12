@@ -1,0 +1,13 @@
+.login
+  %form{:action => '/login', :method => 'post'}
+    %fieldset
+      %p
+        %label Correo Electr&oacute;nico:
+        %br
+        %input{:type => 'text', :name => 'email'}
+      %p
+        %label Contrase&ntilde;a:
+        %br
+        %input{:type => 'password', :name => 'password'}
+      %p
+        %input{:type => 'submit', :value => 'Iniciar Sesión'}

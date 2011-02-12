@@ -5,9 +5,6 @@ GEM
     bson (1.0.9)
     bson_ext (1.1.5)
     durran-validatable (2.0.1)
-    gioext-sinatra-memcache (0.1.0)
-      memcache-client
-      sinatra
     haml (3.0.25)
     i18n (0.5.0)
     mail (2.2.14)
@@ -15,7 +12,6 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    memcache-client (1.8.5)
     mime (0.1)
     mime-types (1.16)
     mongo (1.0.9)
@@ -42,10 +38,8 @@ PLATFORMS
 DEPENDENCIES
   bson_ext
   bundler
-  gioext-sinatra-memcache
   haml
   mail
-  memcache-client
   mime
   mongoid
   rack

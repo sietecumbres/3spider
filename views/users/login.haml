@@ -1,13 +1,13 @@
 .login.span-19.prepend-1.border.content
+  %h3.title bienvenidos a spider
+  %p.text Ingresa tu dirección de correo y contraseña para ingresar a la aplicación
   %form{:action => '/login', :method => 'post'}
     %fieldset
       %p
-        %label Correo Electr&oacute;nico:
-        %br
-        %input{:type => 'text', :name => 'email'}
+        %label.login Correo Electr&oacute;nico:
+        %input{:type => 'text', :name => 'email', :class => 'text-input'}
       %p
-        %label Contrase&ntilde;a:
-        %br
-        %input{:type => 'password', :name => 'password'}
+        %label.login Contrase&ntilde;a:
+        %input{:type => 'password', :name => 'password', :class => 'text-input'}
       %p
-        %input{:type => 'submit', :value => 'Iniciar Sesión'}
+        %input{:type => 'submit', :value => 'Iniciar Sesión', :class => 'send'}

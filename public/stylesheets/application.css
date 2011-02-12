@@ -77,3 +77,47 @@ body{
 .social-icon{
   width: 24px;
 }
+
+input.send {
+	-moz-border-radius: 5px 5px 5px 5px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px 14px;
+  width: 120px;
+}
+
+input.send:hover, input.send:focus{
+  background-color: #F09020;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.mail_list {
+	background-color: #B9C7D3;
+  float: left;
+  margin-top: 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.mail_list table {
+	font-size: 14px;
+  width: 100%;
+}
+
+.mail_list table tr {
+	background: none repeat scroll 0 0 #CFDFEC;
+  color: #3F586D;
+}
+
+.mail_list table tr td {
+	border-bottom: 1px solid #B9C7D3;
+  padding: 2px 20px;
+}
+
+.mail_list a:link, .mail_list a:visited {
+	background: none repeat scroll 0 0 transparent;
+  font-weight: 400;
+  text-decoration: underline;
+}

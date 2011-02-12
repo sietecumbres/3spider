@@ -1,11 +1,13 @@
-all emails here
-= @emails.count
-%br
-%table.emails
-  - @emails.each_with_index do |email, index|
-    %tr{:class => "#{'odd' if (index%2) > 0}"}
-      %td
-        = email.subject
-      %td
-        %a.box{:href => "/emails/#{email.id}/contacts/new"} Seleccionar
+%h3.subtitle= "all emails here  #{@emails.count}"
+.mail_list
+  %br
+  %table
+    - @emails.each_with_index do |email, index|
+      %tr
+        %td
+          %a.subject{:href => "/emails/#{email.id}/contacts/new"}= email.subject
+        %td
+          = email.from
+        %td
+          = email.date
       

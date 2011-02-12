@@ -96,7 +96,6 @@ input.send:hover, input.send:focus{
 .mail_list {
 	background-color: #B9C7D3;
   float: left;
-  margin-top: 30px;
   padding: 10px;
   width: 100%;
 }
@@ -120,4 +119,7 @@ input.send:hover, input.send:focus{
 	background: none repeat scroll 0 0 transparent;
   font-weight: 400;
   text-decoration: underline;
+}
+.mail_list .text {
+	margin: 0;
 }

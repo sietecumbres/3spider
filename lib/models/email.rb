@@ -4,6 +4,7 @@ class Email
   field :message_id
   field :date
   field :subject
+  field :to, :type => Array
   field :from, :type => Array
   
   def self.store_new_emails(emails)

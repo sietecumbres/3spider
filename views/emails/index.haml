@@ -1,13 +1,13 @@
-%h3.subtitle= "all emails here  #{@emails.count}"
+%p.text= "Has ingresado a spider con la dirección de correo electrónico: #{current_user.email}"
 .mail_list
-  %br
+  %p.text= "Número de correos:  #{@emails.count}"
   %table
     - @emails.each_with_index do |email, index|
       %tr
         %td
           %a.subject{:href => "/emails/#{email.id}/contacts/new"}= email.subject
         %td
-          = email.from
+          = ":: #{email.from}"
         %td
-          = email.date
+          = ":: #{email.date}"
       

@@ -6,7 +6,6 @@ Bundler.setup
 require 'sinatra'
 require 'digest/sha1'
 require 'mongoid'
-require 'sinatra/memcache'
 require 'mail'
 require 'mime'
 require 'lib/helpers'

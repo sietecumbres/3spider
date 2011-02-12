@@ -3,6 +3,7 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup
 
+require 'iconv'
 require 'sinatra'
 require 'digest/sha1'
 require 'mongoid'

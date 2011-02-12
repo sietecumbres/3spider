@@ -1,0 +1,65 @@
+.form p {
+  
+}
+.form input, .form textarea { 
+	padding: 8px;
+	width: 305px;
+	color: #999999;
+	box-shadow: rgba(240,144,32, 0.1) 0px 0px 4px;/*0.1 actually means 10 %*/
+	-moz-box-shadow: rgba(240,144,32, 0.1) 0px 0px 4px;
+	-webkit-box-shadow: rgba(240,144,32, 0.1) 0px 0px 4px;
+	}
+
+.form textarea { 
+	width: 425px;
+	max-width: 425px;
+	height: 150px;
+	line-height: 150%;
+	}
+
+.form input:hover, .form textarea:hover,
+.form input:focus, .form textarea:focus,
+.form .select:hover, .form .select:focus { 
+-moz-box-shadow:0 0 4px #F09020;
+	-webkit-box-shadow:0 0 4px #F09020;
+	box-shadow:0 0 4px #F09020;
+}
+
+.form label { 
+	margin-top: 12px;
+	color: #505050;
+	font-weight: normal;
+}
+
+.form .submit {
+  text-align: center;
+}
+
+.form .submit input {
+  /*border: solid 1px #F09020;*/
+	width: 120px;
+	padding: 10px 14px;
+	background: #FFF;
+	font-size: 14px;
+	/*color: #F09020;*/
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor:pointer;
+	}
+
+.form .submit input:hover, .form .submit input:focus{
+  background-color: #F09020;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+#form-div { 
+-moz-border-radius:12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+padding:10px;
+}
+
+#wrapper { 
+margin:0px auto;
+width:470px;
+}

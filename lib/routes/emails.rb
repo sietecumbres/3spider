@@ -3,6 +3,6 @@ get '/emails' do
     adapter = GmailAdapter.new(current_user, 'inbox')
     current_user.store_new_emails(adapter.get_emails)
     @emails = current_user.emails
-    haml :'emails/index', :layout => false
+    haml :'emails/index', {:layout => :layout}
   #end
 end

@@ -1,63 +1,123 @@
 body{
-  font-size: 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Tahoma", Arial, sans-serif;
+  background-image: url(/images/fondo.png);
+  background-repeat: repeat-x;
 }
 
-fieldset{
-  border: none;
+#header{
+  background-image: url(/images/header.png);
+  background-repeat: no-repeat;
+  height: 150px;
 }
 
-.login{
-  color: #818181;
-  width: 600px;
-  background-color: #F6F5F5;
-  margin: 60px auto;
-  border: 1px solid #999;
-  /*  */
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  /**/
-  -moz-box-shadow: 0 0 1px 1px #999;
-  -webkit-box-shadow: 0 0 1px 1px #999;
-  box-shadow: 0 0 1px 1px #999;
-}
-
-.login p{
-  margin-top: 40px;
-}
-
-.login input[type=text], .login input[type=password]{
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 15px;
-  color: #818181;
-  width: 550px;
+#footer{
+  width: 100%;
   height: 30px;
-  border: 1px solid #CCCCCC;
-  -moz-box-shadow: inset 0 0 5px #CCC; /* for Firefox 3.5+ */
- 	-webkit-box-shadow: inset 0 0 5px #CCC; /* for Safari and Chrome */
- 	box-shadow: inset 0 0 5px #CCC; /* CSS 3 Spec */
+  background-image: url(/images/footer.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 7px;
+  color: #F09020;
 }
 
-.login input:focus {
-  outline:none;
-  border: 1px solid #99CC00;
+.content{
+  font-family: "Tahoma", Arial, sans-serif;
+  min-height: 400px;
 }
 
-table.emails{
-  padding: 0px;
-  border-spacing: 0px;
-  border: 1px solid #FFF7D5;
+.title{
+  color: #F09020;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 
-table.emails td{
-  padding: 7px 20px;
+.subtitle{
+  color: #000;
+  text-decoration: underline;
+  font-size: 16px;
 }
 
-table.emails .odd {
-  background-color: #FFF7D5;
+.text{
+  color: #505050;
+  font-size: 14px;
 }
 
-table.emails tr:hover{
-  background-color: #F3F9E1;
+.info-link{
+  color: #F09020;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu{list-style-type: none;}
+
+.menu a{
+  font-family: "Tahoma", Arial, sans-serif;
+  color: #505050;
+  text-decoration: none;
+  padding-left: 12px;
+}
+
+.selected a{
+  color: #F09020;
+  font-weight: bold;
+  background-image: url(/images/arrowicon.png);
+  background-repeat: no-repeat;
+}
+
+#social-menu{
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 130px;
+  left: 5px;
+}
+
+.social-icon{
+  width: 24px;
+}
+
+input.send {
+	-moz-border-radius: 5px 5px 5px 5px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px 14px;
+  width: 120px;
+}
+
+input.send:hover, input.send:focus{
+  background-color: #F09020;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.mail_list {
+	background-color: #B9C7D3;
+  float: left;
+  margin-top: 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.mail_list table {
+	font-size: 14px;
+  width: 100%;
+}
+
+.mail_list table tr {
+	background: none repeat scroll 0 0 #CFDFEC;
+  color: #3F586D;
+}
+
+.mail_list table tr td {
+	border-bottom: 1px solid #B9C7D3;
+  padding: 2px 20px;
+}
+
+.mail_list a:link, .mail_list a:visited {
+	background: none repeat scroll 0 0 transparent;
+  font-weight: 400;
+  text-decoration: underline;
 }

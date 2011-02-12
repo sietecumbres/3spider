@@ -7,6 +7,7 @@ GEM
     durran-validatable (2.0.1)
     haml (3.0.25)
     i18n (0.5.0)
+    iconv (0.1)
     mail (2.2.14)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -39,6 +40,7 @@ DEPENDENCIES
   bson_ext
   bundler
   haml
+  iconv
   mail
   mime
   mongoid

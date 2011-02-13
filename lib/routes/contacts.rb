@@ -1,7 +1,7 @@
 get '/emails/:id/contacts/new' do |email_id|
   adapter = GmailAdapter.new(current_user, 'inbox')
   @email = Email.find(email_id)
-  @contacts = Contact.set_checked_contacts(@email.to)
+  @contacts = Contact.set_checked_contacts(@email.from)
   haml :'contacts/contacts'
 end
 

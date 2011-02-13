@@ -10,6 +10,8 @@ require 'mongoid'
 require 'mail'
 require 'mime'
 require 'lib/helpers'
+require 'aws/ses'
+
 
 #usages
 helpers do

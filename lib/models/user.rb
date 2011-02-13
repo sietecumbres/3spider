@@ -16,7 +16,7 @@ class User
     ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
     emails.each do |email|
       begin
-        self.emails << Email.new(:subject => ic.iconv(email.subject), :date => email.date, :message_id => email.message_id, :from => email.from)
+        self.emails << Email.new(:subject => ic.iconv(email.subject), :date => email.date, :message_id => email.message_id, :emails_list => email.from.concat(email.to))
         save
       end
     end
@@ -32,7 +32,7 @@ class User
       end
       
       c
-    end
+    end if contacts_list
   end
   
 end

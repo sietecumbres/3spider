@@ -6,3 +6,7 @@ get '/emails' do
     haml :'emails/index', {:layout => :layout}
   #end
 end
+
+get '/emails/new' do
+  haml :'emails/new', {:layout => :layout}
+end

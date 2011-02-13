@@ -14,5 +14,5 @@ post '/emails/:id/contacts' do |email_id|
     end
   end
   
-  redirect "/emails/#{email_id}/contacts/new"
+  redirect "/emails"
 end

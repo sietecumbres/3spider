@@ -19,7 +19,7 @@ class User
         list = []
         list.concat(email.from) if email.from
         list.concat(email.to) if email.to
-        self.emails << Email.new(:subject => ic.iconv(email.subject), :date => email.date, :message_id => email.message_id, :emails_list => list)
+        self.emails << Email.new(:subject => ic.iconv(email.subject), :date => email.date, :message_id => email.message_id, :emails_list => list, :from => email.from)
         save
       end
     end

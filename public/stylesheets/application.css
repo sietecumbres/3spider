@@ -139,3 +139,15 @@ a.subject {
   overflow: hidden;
   width: 100%;
 }
+.contact_list {
+	float: left;
+  width: 100%;
+}
+.contact_list .odd {
+	float: left;
+  width: 50%;
+}
+.contact_list .even {
+	float: left;
+  width: 50%;
+}

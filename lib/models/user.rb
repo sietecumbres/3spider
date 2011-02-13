@@ -17,8 +17,8 @@ class User
     emails.each do |email|
       begin
         list = []
-        list.contact(email.from) if email.from
-        list.contact(email.to) if email.to
+        list.concat(email.from) if email.from
+        list.concat(email.to) if email.to
         self.emails << Email.new(:subject => ic.iconv(email.subject), :date => email.date, :message_id => email.message_id, :emails_list => list)
         save
       end

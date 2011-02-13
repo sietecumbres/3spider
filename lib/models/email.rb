@@ -14,8 +14,4 @@ class Email
     where(:message_id => message_id).first
   end
   
-  def self.order_by_date(message_id)
-    order_by(:date.desc)
-  end
-  
 end

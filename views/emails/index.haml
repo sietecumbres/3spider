@@ -4,10 +4,10 @@
   %table
     - @emails.each_with_index do |email, index|
       %tr
-        %td
+        %td.subject
           %a.subject{:href => "/emails/#{email.id}/contacts/new"}= email.subject
-        %td
+        %td.from
           = ":: #{email.from}"
         %td
-          = ":: #{email.date}"
+          = ":: #{email.date.to_date.strftime('%d/%m/%y')}"
       

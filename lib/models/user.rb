@@ -16,7 +16,10 @@ class User
     ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
     emails.each do |email|
       begin
-        self.emails << Email.new(:subject => ic.iconv(email.subject), :date => email.date, :message_id => email.message_id, :emails_list => email.from.concat(email.to))
+        list = []
+        list.contact(email.from) if email.from
+        list.contact(email.to) if email.to
+        self.emails << Email.new(:subject => ic.iconv(email.subject), :date => email.date, :message_id => email.message_id, :emails_list => list)
         save
       end
     end

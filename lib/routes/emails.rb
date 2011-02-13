@@ -10,3 +10,7 @@ end
 get '/emails/new' do
   haml :'emails/new', {:layout => :layout}
 end
+
+post '/emails' do
+  AmazonSESAdapter.send_email(current_user, 'test', params[:message_body])
+end

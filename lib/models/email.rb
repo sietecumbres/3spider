@@ -6,7 +6,7 @@ class Email
   field :message_id
   field :date
   field :subject, :type => Binary
-  field :from, :type => Array
+  field :emails_list, :type => Array
   
   def self.find_by_message_id(message_id)
     where(:message_id => message_id).first

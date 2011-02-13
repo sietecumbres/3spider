@@ -22,4 +22,17 @@ class User
     end
   end
   
+  def set_checked_contacts(contacts_list)
+    contacts_list.collect do |contact|
+      
+      if c = self.contacts.where(:email => contact).first
+        c.checked = 'checked'
+      else
+        c = Contact.new :email => contact
+      end
+      
+      c
+    end
+  end
+  
 end

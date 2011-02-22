@@ -6,7 +6,7 @@
     - @emails.each_with_index do |email, index|
       %tr
         %td.subject
-          %a.subject{:href => "/emails/#{email.id}/contacts/new"}
+          %a.subject.info-link.fancy-contact{:href => "/emails/#{email.id}/contacts/new"}
             = email.subject
         %td.from
           = ":: #{email.from}"

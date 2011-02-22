@@ -38,4 +38,8 @@ class User
     end if contacts_list
   end
   
+  def contacts_list
+    self.contacts.collect {|contact| contact.email}
+  end
+  
 end

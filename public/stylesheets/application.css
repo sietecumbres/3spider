@@ -78,16 +78,17 @@ body{
   width: 24px;
 }
 
-input.send {
+input.send, input.cancel {
 	-moz-border-radius: 5px 5px 5px 5px;
-  background: none repeat scroll 0 0 #FFFFFF;
+  background: none repeat scroll 0 0 #F09020;
+  color: #FFFFFF;
   cursor: pointer;
   font-size: 14px;
   padding: 10px 14px;
   width: 120px;
 }
 
-input.send:hover, input.send:focus{
+input.send:hover, input.send:focus, input.cancel:hover, input.cancel:focus {
   background-color: #F09020;
   color: #FFFFFF;
   font-weight: bold;
@@ -144,11 +145,25 @@ a.subject {
 	float: left;
   width: 100%;
 }
+.contacts {
+	background-color: #B9C7D3;
+  float: left;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
 .contact_list .odd {
-	float: left;
+	background: none repeat scroll 0 0 #CFDFEC;
+  float: left;
   width: 50%;
 }
 .contact_list .even {
-	float: left;
-  width: 50%;
+	background: none repeat scroll 0 0 #CFDFEC;
+  border-right: 1px solid #B9C7D3;
+  float: left;
+  margin-right: 8px;
+  width: 49%;
+}
+.contact_list .text {
+    margin: 0;
 }

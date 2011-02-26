@@ -117,6 +117,7 @@ input.send:hover, input.send:focus{
 
 .mail_list a:link, .mail_list a:visited {
 	background: none repeat scroll 0 0 transparent;
+	color: #3F586D;
   font-weight: 400;
   text-decoration: underline;
 }

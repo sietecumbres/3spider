@@ -6,6 +6,7 @@ $(document).ready(function(){
 	});
 	
 	$('#contact-form').live('submit', function(e){
+		alert('entro');
 		e.preventDefault();
 		$('#wrapper').block({
 			message: "<img src='/images/ajax-loader.gif' />",
@@ -25,16 +26,15 @@ $(document).ready(function(){
 			}
 		});
 	});
-	/*
 	$('.cancel').live('click', function(){
 		$.fancybox.close();
 	});
-	*/
-	
+/*	
 	$('.box').fancybox();
 	$('textarea.editor').ckeditor();
 	$('#send-email').live('click', function(){
 	  body = $('textarea.editor').val();
 	  $.post('/emails', {message_body: body});
 	});
+*/
 });

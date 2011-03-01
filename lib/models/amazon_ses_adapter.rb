@@ -11,12 +11,21 @@ class AmazonSESAdapter
     end
     
     def send_email(user, subject, body)
-      verified_addresses = get_verified_addresses
-      emails_list = user.contacts_list.collect{|contact| contact if verified_addresses.include?(contact)}.flatten
-      credentials.send_email  :to => emails_list,
-                              :source => user.email,
-                              :subject => subject,
-                              :text_body => body
+      body = haml(body, :layout => false)
+      to = user.contacts.collect{|contact| contact.email}
+      
+        Pony.mail(:to  => to,
+          :from        => user.email,
+          :subject     => subject,
+          :body        => body,
+          :via            => :smtp,
+          :via_options => {
+            :address     => 'smtp.sendgrid.net',
+            :port           => '25',
+            :user_name    => 'juange88@gmail.com',
+            :password       => 'jespinosa',
+            :authentication    => :plain
+          })
     end
     
     def verify_address(email)

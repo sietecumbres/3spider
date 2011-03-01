@@ -9,8 +9,9 @@ require 'digest/sha1'
 require 'mongoid'
 require 'mail'
 require 'mime'
+require 'pony'
 require 'lib/helpers'
-require 'aws/ses'
+require 'haml'
 
 
 #usages

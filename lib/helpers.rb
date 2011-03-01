@@ -19,5 +19,24 @@ module Helpers
   def login_required
     redirect '/login' and return unless current_user
   end
+  
+  def send_email(user, subject, body)
+    body = haml(body)
+    to = user.contacts.collect{|contact| contact.email}
+    
+      Pony.mail(:to => to,
+        :from       => user.email,
+        :subject    => subject,
+        :body       => body,
+        :via        => :smtp,
+        :headers    => { 'Content-Type' => 'text/html' },
+        :via_options  => {
+          :address        => 'smtp.sendgrid.net',
+          :port           => '25',
+          :user_name      => 'juange88@gmail.com',
+          :password       => 'jespinosa',
+          :authentication => :plain
+        })
+  end
 
 end

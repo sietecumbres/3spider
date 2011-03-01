@@ -12,5 +12,5 @@ get '/emails/new' do
 end
 
 post '/emails' do
-  AmazonSESAdapter.send_email(current_user, 'test', params[:message_body])
+  send_email(current_user, 'test', :'emails/email')
 end

@@ -9,7 +9,6 @@ end
 post '/emails/:id/contacts' do |email_id|
   params[:contacts].each do |contact|
     unless current_user.contacts.where(:email => contact).first
-      AmazonSESAdapter.verify_address(contact)
       current_user.contacts << Contact.new(:email => contact)
       current_user.save
     end

@@ -20,7 +20,7 @@ helpers do
 end
 
 #Require Models
-%w(user gmail_adapter contact email amazon_ses_adapter).each do |model|
+%w(user gmail_adapter contact email).each do |model|
   require "lib/models/#{model}"
 end
 

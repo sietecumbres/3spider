@@ -1,2 +1,2 @@
-require '/.gmail_forwarder'
+require 'gmail_forwarder'
 run Sinatra::Application

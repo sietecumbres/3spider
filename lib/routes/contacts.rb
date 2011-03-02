@@ -3,7 +3,7 @@ get '/emails/:id/contacts/new' do |email_id|
   @email = current_user.emails.find(email_id)
   @contacts = current_user.set_checked_contacts(@email.emails_list)
   @contacts ||= []
-  haml :'contacts/contacts'
+  haml :'contacts/contacts', {:layout => false}
 end
 
 post '/emails/:id/contacts' do |email_id|

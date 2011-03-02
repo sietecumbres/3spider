@@ -1,13 +1,12 @@
 #wrapper
-  #contact-form
-    %h3.title Listado de contactos
-    %form{:action => "/emails/#{@email.id}/contacts", :method => 'post'}
-      .contact_list
-        .contacts
-          %p.text= "Número de contactos:  #{@contacts.count}" 
-          - @contacts.each_with_index do |contact, c|
-            %div{:class => "#{if (c%2) > 0 then 'odd' else 'even' end}"}
-              %input{:type => 'checkbox', :name => "contacts[]", :value => contact.email, :checked => 'checked'}
-                = contact.email
-        %input{:type => 'submit', :value => 'guardar', :class => 'send'}
-        %input.cancel{:type => "button", :value => "Ahora No"}/
+  %h3.title Listado de contactos
+  %form{:action => "/emails/#{@email.id}/contacts", :method => 'post', :id => 'contact-form'}
+    .contact_list
+      .contacts
+        %p.text= "Número de contactos:  #{@contacts.count}" 
+        - @contacts.each_with_index do |contact, c|
+          %div{:class => "#{if (c%2) > 0 then 'odd' else 'even' end}"}
+            %input{:type => 'checkbox', :name => "contacts[]", :value => contact.email, :checked => 'checked'}
+              = contact.email
+      %input{:type => 'submit', :value => 'guardar', :class => 'send'}
+      %input.cancel{:type => "button", :value => "Ahora No"}/

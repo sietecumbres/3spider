@@ -6,7 +6,6 @@ $(document).ready(function(){
 	});
 	
 	$('#contact-form').live('submit', function(e){
-		alert('entro');
 		e.preventDefault();
 		$('#wrapper').block({
 			message: "<img src='/images/ajax-loader.gif' />",

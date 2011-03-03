@@ -49,3 +49,4 @@ DEPENDENCIES
   pony
   rack
   sinatra
+  will_paginate

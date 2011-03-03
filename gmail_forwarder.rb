@@ -10,12 +10,18 @@ require 'mongoid'
 require 'mail'
 require 'mime'
 require 'pony'
-require 'lib/helpers'
 require 'haml'
-
+require 'will_paginate'
+require 'will_paginate/collection'
+require 'will_paginate/view_helpers'
+require 'lib/helpers/raw_render'
 
 #usages
+%(helpers).each do |helper|
+  require "lib/helpers/#{helper}"
+end
 helpers do
+  include WillPaginate::ViewHelpers
   include Helpers
 end
 

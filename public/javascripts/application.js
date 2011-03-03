@@ -10,7 +10,7 @@ $(document).ready(function(){
 		$(this).ajaxSubmit({
 			success: function(){
 				$.fancybox.close();
-				$.jGrowl("¡Gracias por comunicarse con nosotros!. Pronto nos estaremos comunicando de vuelta.", {life: 10000});
+				$.jGrowl("¡Sus contactos han sido almacenados con éxito!.", {life: 10000});
 			}
 		});
 	});

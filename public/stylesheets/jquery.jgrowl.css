@@ -99,7 +99,7 @@ div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
 }
 
 div.jGrowl div.jGrowl-notification {
-	min-height: 			40px;
+	min-height: 			75px;
 }
 
 div.jGrowl div.jGrowl-notification div.jGrowl-header {
@@ -113,6 +113,11 @@ div.jGrowl div.jGrowl-notification div.jGrowl-close {
 	font-weight: 			bold;
 	font-size: 				1em;
 	cursor:					pointer;
+}
+
+div.jGrowl-message {
+	float: left;
+	padding: 10px 0;
 }
 
 div.jGrowl div.jGrowl-closer {

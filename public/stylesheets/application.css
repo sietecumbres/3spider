@@ -118,8 +118,10 @@ input.send:hover, input.send:focus, input.cancel:hover, input.cancel:focus {
 
 .mail_list a:link, .mail_list a:visited {
 	background: none repeat scroll 0 0 transparent;
-	color: #3F586D;
+  color: #3F586D;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
   text-decoration: underline;
 }
 .mail_list .text {

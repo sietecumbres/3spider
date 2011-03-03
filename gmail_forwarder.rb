@@ -30,20 +30,15 @@ end
 end
 
 #Configuration
-require 'uri'
 
-if ENV['MONGOHQ_URL']
-    mongo_uri = URI.parse(ENV['MONGOHQ_URL'])
-    ENV['MONGOID_HOST'] = mongo_uri.host
-    ENV['MONGOID_PORT'] = mongo_uri.port.to_s
-    ENV['MONGOID_USERNAME'] = mongo_uri.user
-    ENV['MONGOID_PASSWORD'] = mongo_uri.password
-    ENV['MONGOID_DATABASE'] = mongo_uri.path.gsub("/", "")
-end
 Mongoid.configure do |config|
-  name = 'gmail_forwarder'
-  host = 'localhost'
-  config.master = Mongo::Connection.new.db(name)
+  if ENV['MONGOHQ_URL']
+    conn = Mongo::Connection.from_uri(ENV['MONGOHQ_URL'])
+    uri = URI.parse(ENV['MONGOHQ_URL'])
+    config.master = conn.db(uri.path.gsub(/^\//, ''))
+  else
+    config.master = Mongo::Connection.from_uri("mongodb://localhost:27017").db('gmail_forwarder')
+  end
 end
 
 configure do

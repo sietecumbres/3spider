@@ -5,11 +5,21 @@
   %body 
     .container
       #header.span-24
-      - if current_user
-        %a{:href => "/logout"} 
-          logout
-      - else
-        %a{:href => "/login"}
-          login
-      != yield
+      #nav
+        %ul.nav
+          %li
+            %a{:href => "/emails/new"}
+              Enviar
+          %li
+            %a{:href => "/emails"}
+              Listado
+          %li.logout
+            - if current_user
+              %a{:href => "/logout"} 
+                Cerrar Sesión
+            - else
+              %a{:href => "/login"}
+                Iniciar Sesión
+      #content
+        != yield
       #footer.span-24

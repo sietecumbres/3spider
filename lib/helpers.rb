@@ -12,6 +12,12 @@ module Helpers
     session[:password] = user.password
   end
   
+  def logout
+    @current_user = nil
+    session[:email] = nil
+    session[:password] = nil
+  end
+  
   def logged_in?
     @current_user ? true : false
   end
@@ -21,7 +27,7 @@ module Helpers
   end
   
   def send_email(user, subject, body)
-    body = haml(body)
+    body = haml(body, {:layout => false})
     to = user.contacts.collect{|contact| contact.email}
     
       Pony.mail(:to => to,

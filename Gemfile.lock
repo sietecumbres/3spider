@@ -1,55 +1,58 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (2.3.10)
-    bson (1.0.9)
-    bson_ext (1.1.5)
-    durran-validatable (2.0.1)
+    activemodel (3.0.5)
+      activesupport (= 3.0.5)
+      builder (~> 2.1.2)
+      i18n (~> 0.4)
+    activesupport (3.0.5)
+    bson (1.2.4)
+    bson_ext (1.2.4)
+    builder (2.1.2)
     haml (3.0.25)
     i18n (0.5.0)
     iconv (0.1)
-    mail (2.2.14)
+    mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime (0.1)
     mime-types (1.16)
-    mongo (1.0.9)
-      bson (>= 1.0.5)
-    mongoid (1.9.2)
-      activesupport (< 3.0.0)
-      bson (~> 1.0.1)
-      durran-validatable (>= 2.0.1)
-      mongo (~> 1.0.1)
-      will_paginate (< 2.9)
+    mongo (1.2.4)
+      bson (>= 1.2.4)
+    mongoid (2.0.0.rc.7)
+      activemodel (~> 3.0)
+      mongo (~> 1.2)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
     polyglot (0.3.1)
     pony (1.1)
       mail (> 2.0)
-    rack (1.2.1)
+    rack (1.2.2)
     rack-flash (0.1.1)
       rack
-    sinatra (1.1.2)
+    sinatra (1.2.0)
       rack (~> 1.1)
-      tilt (~> 1.2)
-    tilt (1.2.1)
+      tilt (>= 1.2.2, < 2.0)
+    tilt (1.2.2)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    will_paginate (2.3.15)
+    tzinfo (0.3.25)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bson_ext
+  bson_ext (= 1.2.4)
   bundler
   haml
   iconv
   mail
   mime
-  mongoid
+  mongoid (= 2.0.0.rc.7)
   pony
   rack
   rack-flash
   sinatra
-  will_paginate

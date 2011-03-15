@@ -11,17 +11,15 @@ require 'mail'
 require 'mime'
 require 'pony'
 require 'haml'
-require 'will_paginate'
-require 'will_paginate/collection'
-require 'will_paginate/view_helpers'
-require 'lib/helpers/raw_render'
+require 'rack-flash'
+
+use Rack::Flash
 
 #usages
 %(helpers).each do |helper|
   require "lib/helpers/#{helper}"
 end
 helpers do
-  include WillPaginate::ViewHelpers
   include Helpers
 end
 

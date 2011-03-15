@@ -53,6 +53,7 @@ body{
 #content {
 	float: left;
   padding-top: 20px;
+  position: relative;
   width: 100%;
 }
 
@@ -240,4 +241,11 @@ span.cke_skin_kama {
     float: left;
     padding: 5px;
     width: 100%;
+}
+.flash {
+	color: #990000;
+  font-size: 18px;
+  left: 10%;
+  position: absolute;
+  top: 21%;
 }

@@ -8,7 +8,7 @@ get '/emails' do
   
     haml :'emails/index', {:layout => :layout}
   rescue
-    flash[:notice] = 'Usuario o contraseña erroneas'
+    flash[:notice] = 'Dirección de correo y/o contraseña incorrecta'
     redirect '/login'
   end
 end

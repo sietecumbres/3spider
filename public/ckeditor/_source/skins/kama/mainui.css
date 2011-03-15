@@ -15,6 +15,7 @@ span.cke_skin_kama
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	border: 1px solid #D3D3D3;
+	float: left;
 	padding: 5px;
 }
 

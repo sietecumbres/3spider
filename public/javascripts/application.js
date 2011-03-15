@@ -24,5 +24,11 @@ $(document).ready(function(){
 	$('#send-email').live('click', function(){
 	  body = $('textarea.editor').val();
 	  $.post('/emails', {message_body: body});
+		$(this).ajaxSubmit({
+			success: function(){
+				$.jGrowl("El correo ha sido enviado con éxito", {life:10000});
+				window.location.href = '/emails';
+			}
+		});
 	});
 });

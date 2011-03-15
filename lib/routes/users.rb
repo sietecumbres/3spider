@@ -9,3 +9,8 @@ post '/login' do
   login! user
   redirect '/emails'
 end
+
+get "/logout" do
+  logout
+  redirect "/login"
+end

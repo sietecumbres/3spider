@@ -10,6 +10,52 @@ body{
   height: 150px;
 }
 
+#nav {
+	float: left;
+	width: 100%;
+}
+#nav .nav{
+	display: inline;
+  float: left;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#nav .nav li{
+	-moz-border-radius: 5px 5px 0 0;
+	-moz-box-shadow: 0 0 4px #556677;
+  background: none repeat scroll 0 0 #F09020;
+  display: inline;
+  float: left;
+  font-size: 14px;
+  list-style: none outside none;
+  margin: 0 2px;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  width: auto;
+}
+#nav .nav li a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#nav .nav li a:hover {
+	text-decoration: underline;
+}
+#nav .nav .logout{
+	-moz-border-radius: 5px 5px 5px 5px;
+  float: right;
+  font-size: 12px;
+  margin: 8px 2px 0;
+  padding: 5px 14px;
+  text-transform: capitalize;
+}
+#content {
+	float: left;
+  padding-top: 20px;
+  width: 100%;
+}
+
 #footer{
   width: 100%;
   height: 30px;
@@ -84,8 +130,10 @@ input.send, input.cancel {
   color: #FFFFFF;
   cursor: pointer;
   font-size: 14px;
-  padding: 10px 14px;
-  width: 120px;
+  font-weight: bolder;
+  padding: 10px 5px;
+  text-transform: uppercase;
+  width: auto;
 }
 
 input.send:hover, input.send:focus, input.cancel:hover, input.cancel:focus {
@@ -122,7 +170,10 @@ input.send:hover, input.send:focus, input.cancel:hover, input.cancel:focus {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  text-decoration: underline;
+  text-decoration: none;
+}
+.mail_list a:hover {
+	text-decoration: underline;
 }
 .mail_list .text {
 	margin: 0;
@@ -168,4 +219,25 @@ a.subject {
 }
 .contact_list .text {
     margin: 0;
+}
+#top-nav {
+	float: left;
+	width: 100%;
+}
+#top-nav a {
+	-moz-border-radius: 5px 5px 5px 5px;
+  background-color: #F09020;
+  color: #FFFFFF;
+  float: left;
+  font-weight: normal;
+  line-height: 1;
+  padding: 5px;
+  text-decoration: none;
+}
+span.cke_skin_kama {
+    -moz-border-radius: 5px 5px 5px 5px;
+    border: 1px solid #D3D3D3;
+    float: left;
+    padding: 5px;
+    width: 100%;
 }

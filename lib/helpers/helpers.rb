@@ -44,5 +44,13 @@ module Helpers
           :authentication => :plain
         })
   end
-
+  
+  def pagination(model, params, page)
+    <<-pagination
+      <a href='/emails?page=1'>primera</a> |
+      <a href='/emails?page=#{page - 1}'>anterior</a> |
+      <a href='/emails?page=#{page + 1}'>posterior</a> |
+      <a href='/emails?page=#{model.total_pages}'>ultima</a> |
+    pagination
+  end
 end

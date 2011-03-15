@@ -13,4 +13,4 @@
           = ":: #{email.from}"
         %td
           = ":: #{email.date.to_date.strftime('%d/%m/%y')}"
-  != will_paginate @emails
+  != pagination(@emails, params, params[:page].present? ? params[:page].to_i : 1)

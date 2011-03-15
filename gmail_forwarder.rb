@@ -11,6 +11,7 @@ require 'mail'
 require 'mime'
 require 'pony'
 require 'haml'
+require 'will_paginate'
 require 'rack-flash'
 
 use Rack::Flash

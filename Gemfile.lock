@@ -56,3 +56,4 @@ DEPENDENCIES
   rack
   rack-flash
   sinatra
+  will_paginate

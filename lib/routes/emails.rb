@@ -4,12 +4,11 @@ get '/emails' do
     current_user.store_new_emails(adapter.get_emails)
   
     @emails = current_user.emails.ordered.paginate(:per_page => 50, :page => params[:page])
-    #@emails = (emails.sort{|x, y| y.date <=> x.date})
   
     haml :'emails/index', {:layout => :layout}
-  #rescue
-    #flash[:notice] = 'Usuario o contraseña erroneas'
-    #redirect '/login'
+  rescue
+    flash[:notice] = 'Usuario o contraseña erroneas'
+    redirect '/login'
   end
 end
 
